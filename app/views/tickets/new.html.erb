@@ -1,0 +1,8 @@
+<h1>Buy Ticket</h1>
+<%= simple_form_for @ticket do |f| %>
+ <%= f.input :journey_id, collection: Journey.all, label_method: :name, value_method: :id, include_blank: false %>
+ <p><%= f.submit "Buy Ticket" %></p>
+<% end %>
+
+
+<%= link_to 'Tickets', tickets_path %>

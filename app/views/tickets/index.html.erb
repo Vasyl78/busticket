@@ -1,0 +1,14 @@
+<div>
+	<% @tickets.each do |ticket| %>
+		<p><%= ticket.journey_name %></p>
+		<p><%= "Dates: #{ticket.dates}" %></p>
+		<p><%= "Bus Num.: #{ticket.bus_id}" %></p>
+		<p><%= "Price: #{ticket.price} $" %></p>
+		<br>
+		---------------------------------------
+		<br>
+	<% end %>
+</div>
+
+<%= link_to 'Buy Tickets', new_ticket_path %>
+

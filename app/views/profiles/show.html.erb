@@ -1,0 +1,19 @@
+
+<h1>Hello<%= ", #{@profile.first_name} #{@profile.last_name}" %> </h1>
+
+<table>
+	<tr>
+		<td>First name</td>
+		<td><%= @profile.first_name %></td>
+	</tr>
+	<tr>
+		<td>Last name</td>
+		<td><%= @profile.last_name %></td>
+	</tr>
+	<tr>
+		<td>Phone number</td>
+		<td><%= @profile.phone_number %></td>
+	</tr>
+</table>
+
+  <%= link_to 'Edit profile', edit_profile_path, :class => 'navbar-link' %>
