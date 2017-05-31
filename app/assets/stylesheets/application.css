@@ -14,4 +14,8 @@
  *= require_self
  */
 	
-*= require toastr
+/**= require toastr*/
+@import "bootstrap";
+.alert {
+	color: red;
+}

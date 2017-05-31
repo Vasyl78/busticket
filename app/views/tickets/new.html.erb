@@ -1,8 +1,12 @@
 <h1>Buy Ticket</h1>
 <%= simple_form_for @ticket do |f| %>
- <%= f.input :journey_id, collection: Journey.all, label_method: :name, value_method: :id, include_blank: false %>
+ <%= f.input :journey_id, collection: Journey.all, label_method: :name, value_method: :id, include_blank: false, input_html: { class: 'js-journey-select' } %>
+ <%= f.input :start_station_id, as: :select, input_html: { id: 'start-station', class: 'js-journey-station-select' } %>
+ <%= f.input :final_station_id, as: :select, input_html: { id: 'final-station', class: 'js-journey-station-select' } %>
+ 
  <p><%= f.submit "Buy Ticket" %></p>
 <% end %>
 
+<div id="ticket_price"></div>
 
 <%= link_to 'Tickets', tickets_path %>

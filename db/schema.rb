@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170520191256) do
+ActiveRecord::Schema.define(version: 20170526002827) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -64,6 +64,7 @@ ActiveRecord::Schema.define(version: 20170520191256) do
     t.integer  "final_station_id"
     t.datetime "created_at",       null: false
     t.datetime "updated_at",       null: false
+    t.integer  "position"
     t.index ["start_date"], name: "index_routes_on_start_date", using: :btree
     t.index ["start_station_id"], name: "index_routes_on_start_station_id", using: :btree
   end
@@ -81,6 +82,7 @@ ActiveRecord::Schema.define(version: 20170520191256) do
     t.integer  "final_station_id"
     t.datetime "created_at",       null: false
     t.datetime "updated_at",       null: false
+    t.float    "price"
   end
 
   create_table "users", force: :cascade do |t|

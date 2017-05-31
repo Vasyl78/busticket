@@ -13,4 +13,15 @@ Rails.application.routes.draw do
    #get 'persons/edit' => "person#edit"
    resource :profile
    resources :tickets, only: [:new, :create, :index]
+   # get 'tickets/journey_selection' => "ticket#journey_selection"
+   # resources :tickets do
+   #  get :journey_selection,  on: :member
+   #  get :journey_info,       on: :member
+   # end
+
+   resources :journey do
+    get :journey_selection,  on: :member
+    get :journey_info,       on: :member
+   end
+
 end
