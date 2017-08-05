@@ -1,23 +1,26 @@
 class ProfilesController < ApplicationController
 
-	before_action  :find_profile, only: [:show, :edit, :update, :destroy, :upvote]
+	before_action  :find_profile, only: [:show, :edit, :update, :destroy]
 
   def profile
   	@profile
   end
 
   def new
+    binding.pry
   	@profile = Profile.new(user_id: current_user.id)
   end
 
   def edit
    	
   end
+
   def show
     
   end
 
   def create
+     binding.pry
   	@profile = Profile.create(profile_params)
   	if @profile.errors.empty?
 		redirect_to profile_path(@profile)
