@@ -52,6 +52,13 @@ group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
   gem 'pry'
+  # Testing
+  gem 'rspec-rails', '3.6.0'
+  gem 'capybara', '2.15.1'
+  gem 'selenium-webdriver', '3.4.4'
+  gem 'factory_girl_rails', '4.8.0'
+  gem 'database_cleaner', '1.6.1'
+
 end
 
 group :development do
@@ -62,6 +69,11 @@ group :development do
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
 end
+
+group :production do
+  gem 'rails_12factor', '0.0.3'
+end
+
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
